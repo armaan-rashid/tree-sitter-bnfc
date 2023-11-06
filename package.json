@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-bnfc",
+  "version": "1.0.0",
+  "description": "A tree-sitter grammar for context-free grammars (ironic!) written in .cf files for the BNFC parser.",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "lexer"
+  ],
+  "scripts": {
+    "test": "tree-sitter test && tree-sitter parse test/corpus/examples/*"
+  },
+  "author": "Armaan Rashid",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.bnfc",
+      "file-types": [
+        "cf"
+      ],
+      "highlights": "queries/highlight.scm"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+========================
+entrypoints
+========================
+
+entrypoints [Rule] , Category ;
+entrypoints Category ;
+
+---
+(source_file
+	(entry_points (category (category)) (category))
+	(entry_points (category))
+)
+
+========================
+separator and terminator
+========================
+
+separator Rule "" ;
+separator nonempty Rule "" ;
+terminator nonempty Rule "" ;
+separator Rule "" ;
+
+---
+(source_file 
+	(list_macro (category) (terminal))
+	(list_macro (category) (terminal))
+	(list_macro (category) (terminal))
+	(list_macro (category) (terminal))
+)
+
+======================
+rules as choices
+======================
+rules [Rules] ::= [Rule] ;
+rules [Rules] ::= Rule | [Rule] ;
+
+---
+(source_file
+	(rules_macro (category (category)) (producer) (category (category)))
+	(rules_macro (category (category)) (producer) (category) (choice_sep) (category (category)))
+)
+
+=========
+coercions
+=========
+
+coercions Rule 97 ;
+coercions Rule ;	-- erroneous case
+
+---
+(source_file
+	(coercions_macro (category) (prec_lvl))
+	(coercions_macro (category) (MISSING prec_lvl))
+)
+
+==================
+comments
+==================
+comment "--" ;
+comment "{-" "-}" ;
+
+---
+(source_file
+	(comment_macro (terminal))
+	(comment_macro (terminal) (terminal))
+)
+
+=================
+layout macro
+=================
+layout toplevel ;
+layout stop "br" "[]" "||" ;
+layout "one" "two" ;
+
+---
+(source_file
+	(layout_macro (toplevel))
+	(layout_macro (stop) (terminal) (terminal) (terminal))
+	(layout_macro (terminal) (terminal))
+)
+
+==================
+regexes and tokens
+==================
+token Single 'a' ;
+token Uppercase upper ;
+position token Newline '\n' ;
+position token Cat 'a''b' ;
+position token Union ["ab"] ;
+token Seq {"ab"} ;
+token Paren (('a')) ;
+token StarIn ('a'*) ;
+position token StarOut ('a')* ;
+position token Optional ["abc"]? ;
+token SeqPlus {"a+b"}+ ;
+token Malformed {"abcd"} - ["bh"] ;
+position token Redundant 'a' - 'b' | 'a'('b'|'c') ;
+
+---
+(source_file
+	(token_macro (character))
+	(token_macro (char_type))
+	(token_macro (pos) (character))
+	(token_macro (pos) (character) (character))
+	(token_macro (pos) (terminal))
+	(token_macro (terminal))
+	(token_macro (character))
+	(token_macro (character) (star))
+	(token_macro (pos) (character) (star))
+	(token_macro (pos) (terminal) (optional))
+	(token_macro (terminal) (plus))
+	(token_macro (terminal) (terminal))
+	(token_macro (pos) (character) (character) (choice_sep) (character) (character) (choice_sep) (character))
+)
+
+===========================================
+comments on the grammar, not in the grammar
+===========================================
+-- blah blah
+Rulelabel. Rule ::= "wow I love {-multiline-}" Comments ; -- a comment
+{-
+a multiline comment
+-}
+token Label {"--"} ;
+
+---
+(source_file
+	(production (label) (category) (producer) (terminal) (category))
+	(token_macro (terminal))
+)

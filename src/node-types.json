@@ -1,0 +1,427 @@
+[
+  {
+    "type": "category",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "category",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "char_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "coercions_macro",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "category",
+          "named": true
+        },
+        {
+          "type": "prec_lvl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment_macro",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "terminal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "entry_points",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "category",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "label",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "layout_macro",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "stop",
+          "named": true
+        },
+        {
+          "type": "terminal",
+          "named": true
+        },
+        {
+          "type": "toplevel",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_macro",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "category",
+          "named": true
+        },
+        {
+          "type": "terminal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "production",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "category",
+          "named": true
+        },
+        {
+          "type": "label",
+          "named": true
+        },
+        {
+          "type": "producer",
+          "named": true
+        },
+        {
+          "type": "terminal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rules_macro",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "category",
+          "named": true
+        },
+        {
+          "type": "choice_sep",
+          "named": true
+        },
+        {
+          "type": "producer",
+          "named": true
+        },
+        {
+          "type": "terminal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "coercions_macro",
+          "named": true
+        },
+        {
+          "type": "comment_macro",
+          "named": true
+        },
+        {
+          "type": "entry_points",
+          "named": true
+        },
+        {
+          "type": "layout_macro",
+          "named": true
+        },
+        {
+          "type": "list_macro",
+          "named": true
+        },
+        {
+          "type": "production",
+          "named": true
+        },
+        {
+          "type": "rules_macro",
+          "named": true
+        },
+        {
+          "type": "token_macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "terminal",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "token_macro",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "char_type",
+          "named": true
+        },
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "choice_sep",
+          "named": true
+        },
+        {
+          "type": "optional",
+          "named": true
+        },
+        {
+          "type": "plus",
+          "named": true
+        },
+        {
+          "type": "pos",
+          "named": true
+        },
+        {
+          "type": "star",
+          "named": true
+        },
+        {
+          "type": "terminal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": "(:)",
+    "named": false
+  },
+  {
+    "type": "(:[])",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "[]",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "_",
+    "named": false
+  },
+  {
+    "type": "char",
+    "named": false
+  },
+  {
+    "type": "character",
+    "named": true
+  },
+  {
+    "type": "choice_sep",
+    "named": true
+  },
+  {
+    "type": "coercions",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": false
+  },
+  {
+    "type": "digit",
+    "named": false
+  },
+  {
+    "type": "entrypoints",
+    "named": false
+  },
+  {
+    "type": "eps",
+    "named": false
+  },
+  {
+    "type": "internal",
+    "named": false
+  },
+  {
+    "type": "layout",
+    "named": false
+  },
+  {
+    "type": "letter",
+    "named": false
+  },
+  {
+    "type": "lower",
+    "named": false
+  },
+  {
+    "type": "nonempty",
+    "named": false
+  },
+  {
+    "type": "optional",
+    "named": true
+  },
+  {
+    "type": "plus",
+    "named": true
+  },
+  {
+    "type": "pos",
+    "named": true
+  },
+  {
+    "type": "prec_lvl",
+    "named": true
+  },
+  {
+    "type": "producer",
+    "named": true
+  },
+  {
+    "type": "rules",
+    "named": false
+  },
+  {
+    "type": "separator",
+    "named": false
+  },
+  {
+    "type": "star",
+    "named": true
+  },
+  {
+    "type": "stop",
+    "named": true
+  },
+  {
+    "type": "terminator",
+    "named": false
+  },
+  {
+    "type": "token",
+    "named": false
+  },
+  {
+    "type": "toplevel",
+    "named": true
+  },
+  {
+    "type": "upper",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

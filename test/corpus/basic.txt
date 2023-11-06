@@ -1,0 +1,71 @@
+=============
+A single rule
+=============
+
+One. Rule ::= "a" "rule" "has" "itself" "as" "a" Rule "among" "terminals" ;
+
+---
+
+(source_file
+	(production
+	(label)
+	(category)
+	(producer)
+	(terminal)
+	(terminal)
+	(terminal)
+	(terminal)
+	(terminal)
+	(terminal)
+	(category)
+	(terminal)
+	(terminal)
+))
+
+==============
+Multiple rules
+==============
+
+One. Rule ::= "one" Rule ;
+Two. Rule ::= "another" Rule ;
+
+---
+
+(source_file
+	(production (label) (category) (producer) (terminal) (category))
+	(production (label) (category) (producer) (terminal) (category))
+)
+
+============================
+Internal rules, hidden rules
+============================
+
+One.            Rule ::= "one" Rule ;
+Two.            Rule ::= "another" Rule ;
+internal Three. Rule ::= "hidden" Rule ;
+_.              Rule ::= "null" Rule ;
+
+---
+
+(source_file
+	(production (label) (category) (producer) (terminal) (category))
+	(production (label) (category) (producer) (terminal) (category))
+	(production (label) (category) (producer) (terminal) (category))
+	(production (label) (category) (producer) (terminal) (category))
+)
+
+======
+Lists!
+======
+
+[].    [Rule] ::= ;
+(:[]). [Rule] ::= Rule ;
+(:).   [Rule] ::= Rule ";" [Rule] ;
+
+---
+
+(source_file
+	(production (label) (category (category)) (producer))
+	(production (label) (category (category)) (producer) (category))
+	(production (label) (category (category)) (producer) (category) (terminal) (category (category)))
+)
