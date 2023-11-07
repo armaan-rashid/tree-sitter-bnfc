@@ -16,9 +16,9 @@
 (producer) @operator
 (choice_sep) @operator
 
-(label) @constructor
+(label) @function
 
-(pos) @attribute
-(stop) @attribute
-(toplevel) @attribute
+(pos) @tag
+(stop) @tag
+(toplevel) @tag
 
