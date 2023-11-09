@@ -98,19 +98,19 @@ position token Redundant 'a' - 'b' | 'a'('b'|'c') ;
 
 ---
 (source_file
-	(token_macro (character))
-	(token_macro (char_type))
-	(token_macro (pos) (character))
-	(token_macro (pos) (character) (character))
-	(token_macro (pos) (terminal))
-	(token_macro (terminal))
-	(token_macro (character))
-	(token_macro (character) (star))
-	(token_macro (pos) (character) (star))
-	(token_macro (pos) (terminal) (optional))
-	(token_macro (terminal) (plus))
-	(token_macro (terminal) (terminal))
-	(token_macro (pos) (character) (character) (choice_sep) (character) (character) (choice_sep) (character))
+	(token_macro (category) (character))
+	(token_macro (category) (char_type))
+	(token_macro (pos) (category) (character))
+	(token_macro (pos) (category) (character) (character))
+	(token_macro (pos) (category) (terminal))
+	(token_macro (category) (terminal))
+	(token_macro (category) (character))
+	(token_macro (category) (character) (star))
+	(token_macro (pos) (category) (character) (star))
+	(token_macro (pos) (category) (terminal) (optional))
+	(token_macro (category) (terminal) (plus))
+	(token_macro (category) (terminal) (terminal))
+	(token_macro (pos) (category) (character) (character) (choice_sep) (character) (character) (choice_sep) (character))
 )
 
 ===========================================
@@ -126,5 +126,5 @@ token Label {"--"} ;
 ---
 (source_file
 	(production (label) (category) (producer) (terminal) (category))
-	(token_macro (terminal))
+	(token_macro (category) (terminal))
 )

@@ -307,7 +307,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_ident"
+          "name": "category"
         },
         {
           "type": "SYMBOL",

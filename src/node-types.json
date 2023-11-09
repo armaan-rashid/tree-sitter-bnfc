@@ -223,8 +223,12 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "category",
+          "named": true
+        },
         {
           "type": "char_type",
           "named": true

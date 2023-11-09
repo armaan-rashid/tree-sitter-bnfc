@@ -58,7 +58,7 @@ module.exports = grammar({
 
     comment_macro: $ => seq('comment', $.terminal, optional($.terminal)),
 
-    token_macro: $ => seq(optional($.pos), 'token', $._ident, $._regex),
+    token_macro: $ => seq(optional($.pos), 'token', $.category, $._regex),
 
     layout_macro: $ => seq('layout', choice($.toplevel, seq(optional($.stop), repeat1($.terminal)))),
 
