@@ -9,27 +9,29 @@
 "comment" @keyword
 "rules" @keyword
 
-(category) @constant
+(category) @type
 
-(character) @variable
+(char_type) @string.regexp
+(optional) @string.regexp
+(plus) @string.regexp
+(star) @string.regexp
+(character) @string.regexp
+
 (terminal) @string
 
 (producer) @operator
 (choice_sep) @operator
 
-(label) @property
-(prec_lvl) @property
-
-(char_type) @type
-
-(optional) @operator
-(plus) @operator
-(star) @operator
+(label) @variable.other.member
+(prec_lvl) @variable.other.member
 
 (pos) @variable.builtin
 (stop) @variable.builtin
 (toplevel) @variable.builtin
 "nonempty" @variable.builtin
+"internal" @variable.builtin
+
+"." @punctuation
 
 "(" @punctuation.bracket
 ")" @punctuation.bracket
