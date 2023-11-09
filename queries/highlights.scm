@@ -9,15 +9,16 @@
 "comment" @keyword
 "rules" @keyword
 
-(category) @type
+(category) @constant
 
 (character) @variable
-(terminal) @constant
+(terminal) @string
 
 (producer) @operator
 (choice_sep) @operator
 
-(label) @function
+(label) @property
+(prec_lvl) @property
 
 (char_type) @type
 
@@ -28,6 +29,7 @@
 (pos) @variable.builtin
 (stop) @variable.builtin
 (toplevel) @variable.builtin
+"nonempty" @variable.builtin
 
 "(" @punctuation.bracket
 ")" @punctuation.bracket
