@@ -11,6 +11,7 @@
 
 (category) @type
 
+(character) @variable
 (terminal) @constant
 
 (producer) @operator
@@ -18,7 +19,19 @@
 
 (label) @function
 
-(pos) @tag
-(stop) @tag
-(toplevel) @tag
+(char_type) @type
 
+(optional) @operator
+(plus) @operator
+(star) @operator
+
+(pos) @variable.builtin
+(stop) @variable.builtin
+(toplevel) @variable.builtin
+
+"(" @punctuation.bracket
+")" @punctuation.bracket
+"[" @punctuation.bracket
+"]" @punctuation.bracket
+"{" @punctuation.bracket
+"}" @punctuation.bracket
